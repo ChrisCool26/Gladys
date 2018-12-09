@@ -20,6 +20,7 @@
                                     <table id="example2" class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
+                                                <th><%= __('Id') %></th>
                                                 <th><%= __('Name') %></th>
                                                 <th><%= __('Moment') %></th>
                                                 <th><%= __('alarm-auto-alarm') %></th>
@@ -28,6 +29,7 @@
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="alarm in vm.alarms" class="ng-cloak">
+                                                <td>{{alarm.id}}</td>
                                                 <td>{{alarm.name}}</td>
                                                 <td ng-show="alarm.dayofweek == -1 && !alarm.cronrule" >{{alarm.moment}}</td>
                                                 <td ng-show="alarm.dayofweek != -1 && !alarm.cronrule && !alarm.autoWakeUp">{{alarm.moment}}, {{alarm.time}}</td>
